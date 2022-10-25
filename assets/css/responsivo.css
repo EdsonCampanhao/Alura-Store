@@ -1,0 +1,101 @@
+@media screen and (min-width: 0) {
+
+    .destaques__secundario:nth-child(2),
+    .destaques__secundario:nth-child(3),
+    .destaques__secundario:nth-child(4),
+    .destaques__secundario:nth-child(5) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .destaques__principal {
+        grid-area: 1/1/3/5;
+    }
+
+    .destaques__categorias {
+        grid-area: 3/1/3/5;
+    }
+
+    .populares__conteudo {
+        flex-direction: column;
+
+    }
+
+    .populares__card {
+        width: 100%;
+        margin-right: 0;
+        grid-template-rows: 150px auto;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .destaques__secundario:nth-child(2),
+    .destaques__secundario:nth-child(3),
+    .destaques__secundario:nth-child(4),
+    .destaques__secundario:nth-child(5) {
+        display: flex;
+
+    }
+
+    .destaques__principal {
+        background: url(../img/fortnite.jpg) center / cover no-repeat;
+        grid-area: 1/1/3/4;
+    }
+
+    .destaques__secundario:nth-child(2) {
+        background: url(../img/pubg.jpg) center / cover no-repeat;
+        grid-area: 1/4/1/5;
+
+    }
+
+    .destaques__secundario:nth-child(3) {
+        background: url(../img/slack.png) center / cover no-repeat;
+        grid-area: 2/4/2/5;
+    }
+
+    .destaques__secundario:nth-child(4) {
+        background: url(../img/whatsapp.png) center / cover no-repeat;
+        grid-area: 3/4/3/5;
+    }
+
+    .destaques__secundario:nth-child(5) {
+        background: url(../img/cs-go.jpg) center / cover no-repeat;
+        grid-area: 3/3/3/4;
+    }
+
+    .destaques__categorias {
+        grid-area: 3/1/3/3;
+    }
+
+    .populares__conteudo {
+        flex-direction: row;
+
+    }
+
+    .populares__card {
+       
+        margin-bottom: 3rem;
+        margin-right: 1rem;
+        width: calc(50% - 1rem);
+        grid-template-rows: 173px auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .populares__card {
+        width: calc(33.33% - 1rem);
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {.populares__card {
+       
+    margin-bottom: 0rem;
+    
+    width: calc(20% - 1rem);
+    grid-template-rows: 173px auto;
+}}
